@@ -11,12 +11,16 @@ public class Museum : MonoBehaviour {
     public MuseumPassage passagePrefab;
     public MuseumWall wallPrefab;
     public MuseumDisplayCase displayCasePrefab;
+    public Painting paintingPrefab;
+    public string[] paintings;
     
 
     [Range(0f, 1f)]
     public float entryProbability;
     [Range(0f, 1f)]
     public float displayCaseProbability;
+    [Range(0f, 1f)]
+    public float paintingDensity;
 
     private MuseumCell[,] floorPlan;
     private List<MuseumRoom> rooms = new List<MuseumRoom>();
@@ -127,12 +131,26 @@ public class Museum : MonoBehaviour {
 
     private void CreateWall(MuseumCell cell, MuseumCell otherCell, CellDirection direction)
     {
+        bool hasPainting = Random.value < paintingDensity;
+
         MuseumWall wall = Instantiate(wallPrefab) as MuseumWall;
         wall.Initialize(cell, otherCell, direction);
         if (otherCell != null)
         {
             wall = Instantiate(wallPrefab) as MuseumWall;
             wall.Initialize(otherCell, cell, direction.GetOpposite());
+        }
+
+        if (hasPainting)
+        {
+            Painting painting = Instantiate(paintingPrefab) as Painting;
+            painting.Initialize(cell, direction);
+
+            if (paintings.Length > 0)
+            {
+                string paintingName = paintings[(int)Random.Range(0, paintings.Length)];
+                painting.LoadTexture(paintingName);
+            }
         }
     }
 

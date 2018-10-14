@@ -5,7 +5,6 @@ using UnityEngine;
 public abstract class MuseumCellEdge : MonoBehaviour {
 
     public MuseumCell cell, otherCell;
-
     public CellDirection direction;
 
     public void Initialize (MuseumCell cell, MuseumCell otherCell, CellDirection direction)

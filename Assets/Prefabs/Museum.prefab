@@ -63,5 +63,12 @@ MonoBehaviour:
     type: 2}
   displayCasePrefab: {fileID: 114163014001830762, guid: bae38ecfc946a944b9639c8949289ca0,
     type: 2}
+  paintingPrefab: {fileID: 114759108943062172, guid: 2577ba4a1cf9a0b429d1148c3b78d3ed,
+    type: 2}
+  paintings:
+  - cat1
+  - cat2
+  - cat3
   entryProbability: 0.032
   displayCaseProbability: 0.15
+  paintingDensity: 0.63
