@@ -115,10 +115,16 @@ public class Museum : MonoBehaviour {
 
         if (isDisplayCase)
         {
-            MuseumPassage displayCase = Instantiate(displayCasePrefab) as MuseumPassage;
+            MuseumDisplayCase displayCase = Instantiate(displayCasePrefab) as MuseumDisplayCase;
             displayCase.Initialize(cell, otherCell, direction);
-            displayCase = Instantiate(displayCasePrefab) as MuseumPassage;
+            displayCase = Instantiate(displayCasePrefab) as MuseumDisplayCase;
             displayCase.Initialize(otherCell, cell, direction.GetOpposite());
+
+            if (paintings.Length > 0)
+            {
+                string paintingName = paintings[(int)Random.Range(0, paintings.Length)];
+                displayCase.LoadTexture(paintingName);
+            }
         }
         else
         {

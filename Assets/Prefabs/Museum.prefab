@@ -61,7 +61,7 @@ MonoBehaviour:
     type: 2}
   wallPrefab: {fileID: 114253459585110158, guid: ab51a146c4d1d5c43a4afdfe5106e379,
     type: 2}
-  displayCasePrefab: {fileID: 114163014001830762, guid: bae38ecfc946a944b9639c8949289ca0,
+  displayCasePrefab: {fileID: 114538967066871442, guid: bae38ecfc946a944b9639c8949289ca0,
     type: 2}
   paintingPrefab: {fileID: 114759108943062172, guid: 2577ba4a1cf9a0b429d1148c3b78d3ed,
     type: 2}
@@ -69,6 +69,9 @@ MonoBehaviour:
   - cat1
   - cat2
   - cat3
-  entryProbability: 0.032
-  displayCaseProbability: 0.15
-  paintingDensity: 0.63
+  - cat4
+  - cat5
+  - cat6
+  entryProbability: 0.048
+  displayCaseProbability: 0.27
+  paintingDensity: 0.894

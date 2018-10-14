@@ -22,6 +22,5 @@ public class Painting : MonoBehaviour {
     {
         paintingTexture = Resources.Load(imagePath) as Texture2D;
         transform.GetChild(0).GetComponent<Renderer>().material.mainTexture = paintingTexture;
-        transform.GetChild(0).GetComponent<Renderer>().material.mainTexture.wrapMode = TextureWrapMode.Clamp;
     }
 }
