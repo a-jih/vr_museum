@@ -2,7 +2,4 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MuseumWall : MuseumCellEdge {
-
-
-}
+public class MuseumWall : MuseumCellEdge {}

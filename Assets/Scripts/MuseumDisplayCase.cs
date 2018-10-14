@@ -2,4 +2,4 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MuseumPassage : MuseumCellEdge {}
+public class MuseumDisplayCase : MuseumPassage {}
